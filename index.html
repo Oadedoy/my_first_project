@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator (pure JS)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="calculator">
+        <!-- Dark mode toggle -->
+        <div class="theme-toggle">
+            <span>☀️</span>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle" />
+                <span class="slider round"></span>
+            </label>
+            <span>🌙</span>
+        </div>
+
+        <h2>🧮 Calculator</h2>
+
+        <div class="input-group">
+            <input type="number" id="num1" placeholder="First number" step="any" />
+            <select id="operation">
+                <option value="add">+</option>
+                <option value="subtract">−</option>
+                <option value="multiply">×</option>
+                <option value="divide">÷</option>
+                <option value="power">x^y</option>
+                <option value="sqrt">√x</option>
+            </select>
+            <input type="number" id="num2" placeholder="Second (ignore for √x)" step="any" />
+        </div>
+
+        <button id="calculateBtn">Calculate</button>
+
+        <div id="result">Enter numbers and press Calculate</div>
+
+        <hr />
+
+        <div class="history-section">
+            <div class="history-header">
+                <h3>📜 History</h3>
+                <button id="clearHistoryBtn">Clear all</button>
+            </div>
+            <ul id="historyList">
+                <li class="history-empty">No calculations yet</li>
+            </ul>
+        </div>
+        <div class="note">History is saved in your browser (localStorage)</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
